@@ -13,6 +13,7 @@ import {Router, Route} from 'react-router'
 import reducers from 'reducers'
 import Layout from 'containers/layout'
 import Home from 'containers/home'
+import About from 'containers/about'
 
 const store = createStore(reducers, composeWithDevTools(
     applyMiddleware(thunk)
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Router history={history}>
             <Route component={Layout}>
                 <Route path='/' component={Home} />
+                <Route path='/about' component={About}/>
             </Route>
         </Router>
     </Provider>,
