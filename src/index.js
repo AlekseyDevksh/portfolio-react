@@ -12,8 +12,11 @@ import {Router, Route} from 'react-router'
 
 import reducers from 'reducers'
 import Layout from 'containers/layout'
-import Home from 'containers/home'
-import About from 'containers/about'
+import Home from 'containers/pages/home'
+import About from 'containers/pages/about'
+import Resume from 'containers/pages/resume'
+import Portfolio from 'containers/pages/portfolio'
+import Contacts from 'containers/pages/contacts'
 
 const store = createStore(reducers, composeWithDevTools(
     applyMiddleware(thunk)
@@ -27,6 +30,9 @@ ReactDOM.render(
             <Route component={Layout}>
                 <Route path='/' component={Home} />
                 <Route path='/about' component={About}/>
+                <Route path='/resume' component={Resume}/>
+                <Route path='/portfolio' component={Portfolio}/>
+                <Route path='/contacts' component={Contacts}/>
             </Route>
         </Router>
     </Provider>,
