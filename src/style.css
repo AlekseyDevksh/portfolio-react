@@ -62,6 +62,14 @@ body {
 .header-wrap{
     bottom: 0;
     text-align: center;
+    left: 0;
+    background: #1c262b;
+    position: fixed;
+    z-index: 2000;
+    width: 120px;
+    top: 0;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .nav-menu ul {
@@ -106,4 +114,27 @@ body {
 
 .copy-text p {
     font-size: 12px;
+}
+
+.header .social {
+    margin: 1em 0;
+    padding: 0 6px;
+}
+
+.social li{
+    display: inline-block;
+    padding: 0;
+    margin-bottom: -3px;
+}
+
+.container {
+    left: 120px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    perspective: 1200px;
+    overflow: hidden;
 }
